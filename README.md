@@ -7,9 +7,9 @@ One potential example would be for taking a string with UTF-8 or other special c
 ## Usage
 
 ```javascript
-    var safePath = require('safe-path');
+var safePath = require('safe-path');
     
-    console.log(safePath.format('AC/DC Compilation CD'));
+console.log(safePath.format('AC/DC Compilation CD'));
 ```
 
     => AC_DC_Compilation_CD

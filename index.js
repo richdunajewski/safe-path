@@ -6,7 +6,7 @@ module.exports.format = function (path) {
     formattedPath = formattedPath.replace(/(?:\'|`)/gi, '');
     formattedPath = replaceAccented(formattedPath);
     formattedPath = replaceSymbols(formattedPath);
-    formattedPath = formattedPath.replace(/(?:[^a-z0-9_])+/gi, '_');
+    formattedPath = formattedPath.replace(/(?:[^a-z0-9])+/gi, '_');
 
     //take paths which begin with _ and Base64 encode them
     if (formattedPath.substring(0, 1) == '_') formattedPath = '_' + require('urlsafe-base64').encode(new Buffer(path));
@@ -16,17 +16,24 @@ module.exports.format = function (path) {
 
 function replaceAccented(str) {
     str = str.replace(/(?:À|Á|Â|Ä|Å|Ã)/g, 'A');
+    str = str.replace(/(?:Ç)/g, 'C');
     str = str.replace(/(?:È|É|Ê|Ë)/g, 'E');
     str = str.replace(/(?:Ì|Í|Î|Ï)/g, 'I');
     str = str.replace(/(?:Ò|Ó|Ô|Ö|Õ)/g, 'O');
     str = str.replace(/(?:Ù|Ú|Û|Ü)/g, 'U');
+    str = str.replace(/(?:Ý)/g, 'Y');
     str = str.replace(/(?:Ñ)/g, 'N');
+    str = str.replace(/(?:Æ)/g, 'Ae');
+    str = str.replace(/(?:ß)/g, 'ss');
     str = str.replace(/(?:à|á|â|ä|å|ã)/g, 'a');
+    str = str.replace(/(?:ç)/g, 'c');
     str = str.replace(/(?:è|é|ê|ë)/g, 'e');
     str = str.replace(/(?:ì|í|î|ï)/g, 'i');
     str = str.replace(/(?:ò|ó|ô|ö|õ)/g, 'o');
     str = str.replace(/(?:ù|ú|û|ü)/g, 'u');
+    str = str.replace(/(?:ý)/g, 'y');
     str = str.replace(/(?:ñ)/g, 'n');
+    str = str.replace(/(?:æ)/g, 'ae');
     return str;
 }
 

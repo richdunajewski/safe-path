@@ -8,5 +8,5 @@ var samples = [
 ];
 
 for (var i = 0; i < samples.length; i++) {
-    console.log(samples[i], '   =>   ', safePath.format(samples[i].split(' - ')[0]), '-', safePath.format(samples[i].split(' - ')[1]));
+    console.log(samples[i], '   =>   ', safePath.format(samples[i].split(' - ')[0]) + '/' + safePath.format(samples[i].split(' - ')[1]));
 }

@@ -1,5 +1,5 @@
 {
-  "name": "safe-path",
+  "name": "safe-paths",
   "version": "0.1.0",
   "description": "This module is intended to help format a string into a cross-platform path-safe string.",
   "main": "index.js",

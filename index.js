@@ -15,25 +15,25 @@ module.exports.format = function (path) {
 };
 
 function replaceAccented(str) {
-    str = str.replace(/(?:À|Á|Â|Ä|Å|Ã)/g, 'A');
-    str = str.replace(/(?:Ç)/g, 'C');
-    str = str.replace(/(?:È|É|Ê|Ë)/g, 'E');
-    str = str.replace(/(?:Ì|Í|Î|Ï)/g, 'I');
-    str = str.replace(/(?:Ò|Ó|Ô|Ö|Õ)/g, 'O');
-    str = str.replace(/(?:Ù|Ú|Û|Ü)/g, 'U');
-    str = str.replace(/(?:Ý)/g, 'Y');
-    str = str.replace(/(?:Ñ)/g, 'N');
-    str = str.replace(/(?:Æ)/g, 'Ae');
-    str = str.replace(/(?:ß)/g, 'ss');
-    str = str.replace(/(?:à|á|â|ä|å|ã)/g, 'a');
-    str = str.replace(/(?:ç)/g, 'c');
-    str = str.replace(/(?:è|é|ê|ë)/g, 'e');
-    str = str.replace(/(?:ì|í|î|ï)/g, 'i');
-    str = str.replace(/(?:ò|ó|ô|ö|õ)/g, 'o');
-    str = str.replace(/(?:ù|ú|û|ü)/g, 'u');
-    str = str.replace(/(?:ý)/g, 'y');
-    str = str.replace(/(?:ñ)/g, 'n');
-    str = str.replace(/(?:æ)/g, 'ae');
+    str = str.replace(/(?:\xC0|\xC1|\xC2|\xC3|\xC4|\xC5)/g, 'A');
+    str = str.replace(/(?:\xC7)/g, 'C');
+    str = str.replace(/(?:\xC8|\xC9|\xCA|\xCB)/g, 'E');
+    str = str.replace(/(?:\xCC|\xCD|\xCE|\xCF)/g, 'I');
+    str = str.replace(/(?:\xD2|\xD3|\xD4|\xD6|\xD5)/g, 'O');
+    str = str.replace(/(?:\xD9|\xDA|\xDB|\xDC)/g, 'U');
+    str = str.replace(/(?:\xDD)/g, 'Y');
+    str = str.replace(/(?:\xD1)/g, 'N');
+    str = str.replace(/(?:\xC6)/g, 'Ae');
+    str = str.replace(/(?:\xDF)/g, 'ss');
+    str = str.replace(/(?:\xE0|\xE1|\xE2|\xE4|\xE5|\xE3)/g, 'a');
+    str = str.replace(/(?:\xE7)/g, 'c');
+    str = str.replace(/(?:\xE8|\xE9|\xEA|\xEB)/g, 'e');
+    str = str.replace(/(?:\xEC|\xED|\xEE|\xEF)/g, 'i');
+    str = str.replace(/(?:\xF2|\xF3|\xF4|\xF6|\xF5)/g, 'o');
+    str = str.replace(/(?:\xF9|\xFA|\xFB|\xFC)/g, 'u');
+    str = str.replace(/(?:\xFD)/g, 'y');
+    str = str.replace(/(?:\xF1)/g, 'n');
+    str = str.replace(/(?:\xE6)/g, 'ae');
     return str;
 }
 

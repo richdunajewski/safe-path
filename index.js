@@ -21,7 +21,7 @@ function replaceAccented(str) {
     str = str.replace(/(?:\xCC|\xCD|\xCE|\xCF)/g, 'I');
     str = str.replace(/(?:\xD2|\xD3|\xD4|\xD6|\xD5)/g, 'O');
     str = str.replace(/(?:\xD9|\xDA|\xDB|\xDC)/g, 'U');
-    str = str.replace(/(?:\xDD)/g, 'Y');
+    str = str.replace(/(?:\xDD|\x9F)/g, 'Y');
     str = str.replace(/(?:\xD1)/g, 'N');
     str = str.replace(/(?:\xC6)/g, 'Ae');
     str = str.replace(/(?:\xDF)/g, 'ss');
@@ -31,7 +31,7 @@ function replaceAccented(str) {
     str = str.replace(/(?:\xEC|\xED|\xEE|\xEF)/g, 'i');
     str = str.replace(/(?:\xF2|\xF3|\xF4|\xF6|\xF5)/g, 'o');
     str = str.replace(/(?:\xF9|\xFA|\xFB|\xFC)/g, 'u');
-    str = str.replace(/(?:\xFD)/g, 'y');
+    str = str.replace(/(?:\xFD|\xFF)/g, 'y');
     str = str.replace(/(?:\xF1)/g, 'n');
     str = str.replace(/(?:\xE6)/g, 'ae');
     return str;

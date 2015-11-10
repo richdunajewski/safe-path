@@ -41,5 +41,6 @@ function replaceSymbols(str) {
     str = str.replace(/(?:\(|\))/g, '');
     str = str.replace(/(?:\.|\?)/g, '');
     str = str.replace(/(?:_+)/g, '_');
+    str = str.replace(/(?:\$+)/g, 's');
     return str;
 }

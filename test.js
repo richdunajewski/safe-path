@@ -4,6 +4,7 @@ var samples = [
     'AC/DC - AC/DC Compilation CD',
     'Bob\'s Music Cafe - D4 Noise & FX',
     'Various Artists - Now That\'s What I Call Music! Vol. 15',
+    'Ke$ha - ANIMAL',
     '葉月ゆら - 東方来夢来人'
 ];
 
